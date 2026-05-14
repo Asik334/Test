@@ -1,0 +1,93 @@
+/* numeric-input.css — drop into your project or use CSS Modules */
+
+/* ── Base input styles ──────────────────────────────────────────────────────── */
+input[type="text"].numeric-input,
+.numeric-input-root input {
+  /* Layout */
+  display: inline-block;
+  box-sizing: border-box;
+  min-width: 72px;
+  padding: 8px 12px;
+
+  /* Typography */
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 450;
+  line-height: 1.4;
+  color: #0f0f0f;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.01em;
+
+  /* Visual */
+  background: #ffffff;
+  border: 1.5px solid #d0d0d0;
+  border-radius: 8px;
+  outline: none;
+
+  /* Transition */
+  transition:
+    width 120ms ease,
+    border-color 150ms ease,
+    box-shadow 150ms ease;
+}
+
+/* Hover */
+input[type="text"].numeric-input:not(:disabled):hover,
+.numeric-input-root input:not(:disabled):hover {
+  border-color: #a0a0a0;
+}
+
+/* Focus */
+input[type="text"].numeric-input:focus,
+.numeric-input-root input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+}
+
+/* Disabled */
+input[type="text"].numeric-input:disabled,
+.numeric-input-root input:disabled {
+  background: #f5f5f5;
+  border-color: #e0e0e0;
+  color: #999;
+  cursor: not-allowed;
+}
+
+/* Placeholder */
+input[type="text"].numeric-input::placeholder,
+.numeric-input-root input::placeholder {
+  color: #c0c0c0;
+}
+
+/* ── Dark mode ──────────────────────────────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  input[type="text"].numeric-input,
+  .numeric-input-root input {
+    background: #1a1a1a;
+    border-color: #333;
+    color: #f0f0f0;
+  }
+
+  input[type="text"].numeric-input:not(:disabled):hover,
+  .numeric-input-root input:not(:disabled):hover {
+    border-color: #555;
+  }
+
+  input[type="text"].numeric-input:focus,
+  .numeric-input-root input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+  }
+
+  input[type="text"].numeric-input:disabled,
+  .numeric-input-root input:disabled {
+    background: #111;
+    border-color: #222;
+    color: #555;
+  }
+
+  input[type="text"].numeric-input::placeholder,
+  .numeric-input-root input::placeholder {
+    color: #444;
+  }
+}
