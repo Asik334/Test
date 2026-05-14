@@ -5,7 +5,7 @@ import React, {
   useRef,
   useState,
 } from "react";
-import { formatNumber, remapCursor, stripFormatting } from "../utils/format";
+import { formatNumber, remapCursor, stripFormatting } from "./format";
 
 /* ─── Types ─────────────────────────────────────────────────────────────────── */
 
